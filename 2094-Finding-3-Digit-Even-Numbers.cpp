@@ -16,10 +16,10 @@ public:
             int c = x;
             if(m.find(a) != m.end()){
                 m[a]--;
-                if(m[a] == 0) m.erase(a);   // why????
+                if(m[a] == 0) m.erase(a);   // we have to erase bcoz m[a] = 0 is also existing in the map
                 if(m.find(b) != m.end()){
                     m[b]--;
-                    if(m[b] == 0) m.erase(b); // why????
+                    if(m[b] == 0) m.erase(b); // we have to erase bcoz m[b] = 0 is also existing in the map
                     if(m.find(c) != m.end()){
                         ans.push_back(i);
                     }
