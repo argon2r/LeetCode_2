@@ -3,9 +3,8 @@ public:
     // this fn is for traversal from the node(root) that is called
     void helper(TreeNode* root , long long sum , int &count){
         if(root==NULL) return;
-        if(root->val == sum){
-            count++;
-        }
+        if(root->val == sum) count++;
+    
         helper(root->left , sum-(long long) (root->val) , count);
         helper(root->right , sum-(long long) (root->val), count);
     }
